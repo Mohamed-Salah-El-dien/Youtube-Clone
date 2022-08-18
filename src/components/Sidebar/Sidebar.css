@@ -1,0 +1,87 @@
+.sidebar {
+  background: #212121;
+  width: 72px;
+  height: 90%;
+  position: absolute;
+  top: 4rem;
+  z-index: 2;
+  overflow: hidden;
+  animation: slide-left 0s ease-in forwards;
+}
+
+.sidebar.active {
+  width: 240px;
+  height: 90%;
+  animation: slide-right 0s ease-in forwards;
+}
+
+@keyframes slide-right {
+  0% {
+    width: 72px;
+  }
+  100% {
+    width: 240px;
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    width: 240px;
+  }
+  100% {
+    width: 72px;
+  }
+}
+
+.sidebar .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.2rem;
+}
+
+.sidebar .container .btn {
+  width: 100%;
+  height: 100%;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sidebar .container .btn:hover {
+  background-color: rgba(255, 255, 255, 0.151);
+}
+
+.sidebar .container .btn.hidden {
+  visibility: hidden;
+}
+
+.sidebar .container .btn.active {
+  padding-left: 3rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+}
+
+.sidebar .container .btn .icon {
+  color: white;
+  font-size: 1.3rem;
+}
+
+.sidebar .container .btn .text {
+  color: white;
+  font-size: 0.7rem;
+}
+
+.sidebar .container .btn .text.active {
+  font-size: 1rem;
+}
+
+.sidebar .container .line.active {
+  background: rgba(255, 255, 255, 0.151);
+  height: 2px;
+  width: 100%;
+}
